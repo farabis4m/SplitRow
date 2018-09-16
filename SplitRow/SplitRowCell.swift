@@ -61,6 +61,7 @@ open class SplitRowCell<L: RowType, R: RowType>: Cell<SplitRowValue<L.Cell.Value
 		
 		tableViewRight.row = row.rowRight
 		tableViewRight.isScrollEnabled = false
+        tableViewRight.leftSeparatorStyle = row.middleSeparatorStyle
 		tableViewRight.setup()
 		
 		setupConstraints()
