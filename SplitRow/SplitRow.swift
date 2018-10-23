@@ -10,7 +10,7 @@ import Eureka
 
 open class _SplitRow<L: RowType, R: RowType>: Row<SplitRowCell<L,R>> where L: BaseRow, R: BaseRow{
 	
-    open var middleSeparatorStyle: UITableViewCellSeparatorStyle = .singleLine
+    open var middleSeparatorStyle: UITableViewCell.SeparatorStyle = .singleLine
     
 	open override var section: Section?{
 		get{ return super.section }
