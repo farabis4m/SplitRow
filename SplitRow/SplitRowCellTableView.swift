@@ -35,6 +35,9 @@ class SplitRowCellTableView<T: TypedRowType>: UITableView, UITableViewDelegate, 
 		guard let row = self.row else{ return }
 		row.baseCell.setup()
 		row.baseCell.selectionStyle = .none
+        
+        // clear background
+        backgroundColor = UIColor.clear
 	}
 	
 	open func update(){
@@ -88,6 +91,7 @@ class SplitRowCellTableView<T: TypedRowType>: UITableView, UITableViewDelegate, 
 			let separatorView = UIView()
 			separatorView.backgroundColor = .groupTableViewBackground
 			separatorView.translatesAutoresizingMaskIntoConstraints = false
+            cell.backgroundColor = UIColor.clear
 
 			cell.addSubview(separatorView)
             cell.bringSubviewToFront(separatorView)

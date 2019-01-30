@@ -9,6 +9,9 @@
 import Eureka
 
 open class _SplitRow<L: RowType, R: RowType>: Row<SplitRowCell<L,R>> where L: BaseRow, R: BaseRow{
+    
+    // backgroundColor
+    open var backgroundColor = UIColor.white
 	
     open var middleSeparatorStyle: UITableViewCell.SeparatorStyle = .singleLine
     
