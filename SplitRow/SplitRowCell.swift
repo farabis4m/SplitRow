@@ -48,7 +48,7 @@ open class SplitRowCell<L: RowType, R: RowType>: Cell<SplitRowValue<L.Cell.Value
 		guard let row = self.row as? _SplitRow<L,R> else{ return }
         
         // set background color
-        backgroundColor = row.backgroundColor
+        backgroundColor = row.background
 		
 		//TODO: If we use UITableViewAutomaticDimension instead of 44.0 we encounter constraint errors :(
 		let maxRowHeight = max(row.rowLeft?.cell?.height?() ?? 44.0, row.rowRight?.cell?.height?() ?? 44.0)
